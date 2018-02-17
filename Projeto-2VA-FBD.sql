@@ -11,7 +11,7 @@ CREATE TABLE Departamento(
     );
     
 CREATE TABLE Funcionario(
-	CPF CHAR(11) NOT NULL,
+	CPF VARCHAR(11) NOT NULL,
     Nome VARCHAR(100),
     Telefone VARCHAR(20),
     Salario FLOAT,
@@ -22,7 +22,7 @@ CREATE TABLE Funcionario(
     );
 
 CREATE TABLE FuncionarioADM(
-	CPF CHAR(11) NOT NULL,
+	CPF VARCHAR(11) NOT NULL,
     HorarioInicio TIME,
     HorarioSaida TIME, 
     NumSala INT,
@@ -31,7 +31,7 @@ CREATE TABLE FuncionarioADM(
     );
 
 CREATE TABLE FuncionarioProjeto(
-	CPF CHAR(11) NOT NULL,
+	CPF VARCHAR(11) NOT NULL,
     CodProjeto INT NOT NULL,
     CONSTRAINT PRIMARY KEY (CPF),
     CONSTRAINT FOREIGN KEY (CPF) REFERENCES Funcionario (CPF),
