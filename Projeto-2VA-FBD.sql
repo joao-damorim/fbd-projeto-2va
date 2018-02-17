@@ -3,7 +3,7 @@ CREATE DATABASE Projeto2VA;
 USE Projeto2VA;
 
 CREATE TABLE Departamento(
-CodDept INT  NOT NULL,
+	CodDept INT  NOT NULL,
     Nome VARCHAR(100),
     Gerente VARCHAR(11)
     );
