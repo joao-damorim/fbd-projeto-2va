@@ -5,9 +5,7 @@ USE Projeto;
 CREATE TABLE Departamento(
 	CodDept INT  NOT NULL,
     Nome VARCHAR(100),
-    Gerente VARCHAR(11),
-    CONSTRAINT PRIMARY KEY (CodDept),
-    CONSTRAINT FOREIGN KEY (Gerente) REFERENCES Funcionario (CPF)
+    Gerente VARCHAR(11)
     );
     
 CREATE TABLE Funcionario(
@@ -15,35 +13,27 @@ CREATE TABLE Funcionario(
     Nome VARCHAR(100),
     Telefone VARCHAR(20),
     Salario FLOAT,
-    Tipo
-    CodDept INT NOT NULL,
-    CONSTRAINT PRIMARY KEY (CPF),
-    CONSTRAINT FOREIGN KEY (CodDept) REFERENCES Departamento (CodDept)
+    Tipo VARCHAR(30),
+    CodDept INT NOT NULL
     );
 
 CREATE TABLE FuncionarioADM(
 	CPF VARCHAR(11) NOT NULL,
     HorarioInicio TIME,
     HorarioSaida TIME, 
-    NumSala INT,
-    CONSTRAINT PRIMARY KEY (CPF),
-    CONSTRAINT FOREIGN KEY (CPF) REFERENCES Funcionario (CPF)
+    NumSala INT
     );
 
 CREATE TABLE FuncionarioProjeto(
 	CPF VARCHAR(11) NOT NULL,
-    CodProjeto INT NOT NULL,
-    CONSTRAINT PRIMARY KEY (CPF),
-    CONSTRAINT FOREIGN KEY (CPF) REFERENCES Funcionario (CPF),
-    CONSTRAINT FOREIGN KEY (CodDept) REFERENCES Departamento (CodDept)
+    CodProjeto INT NOT NULL
     );
     
 CREATE TABLE Projeto(
 	Codigo INT NOT NULL,
     Nome VARCHAR(100),
     DataInicial DATE,
-    DataFinal DATE,
-    CONSTRAINT PRIMARY KEY (Codigo)
+    DataFinal DATE
     );
     
 CREATE TABLE Historico_Funcionario(
@@ -51,8 +41,20 @@ CREATE TABLE Historico_Funcionario(
     Cargo VARCHAR(100),
     DataInicial DATE,
     DataFinal DATE,
-    CodDept INT NOT NULL,
-    CONSTRAINT PRIMARY KEY (CPF),
-    CONSTRAINT PRIMARY KEY (DataInicial),
-    CONSTRAINT FOREIGN KEY (CPF) REFERENCES Funcionario (CPF)
+    CodDept INT NOT NULL
     );
+    
+ALTER TABLE Departamento ADD PRIMARY KEY(CodDept);
+ALTER TABLE Funcionario ADD PRIMARY KEY(CPF);
+ALTER TABLE FuncionarioADM ADD PRIMARY KEY(CPF);
+ALTER TABLE FuncionarioProjeto ADD PRIMARY KEY(CPF);
+ALTER TABLE Projeto ADD PRIMARY KEY(Codigo);
+ALTER TABLE Historico_Funcionario ADD PRIMARY KEY(CPF, DataInicial);
+
+
+ALTER TABLE Departamento ADD FOREIGN KEY (Gerente) REFERENCES Funcionario(CPF) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE Funcionario ADD FOREIGN KEY (CodDept) REFERENCES Departamento (CodDept) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE FuncionarioADM ADD FOREIGN KEY (CPF) REFERENCES Funcionario (CPF) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE FuncionarioProjeto ADD FOREIGN KEY (CPF) REFERENCES Funcionario(CPF) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE FuncionarioProjeto ADD FOREIGN KEY (CodDept) REFERENCES Departamento (CodDept) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE Historico_Funcionario ADD FOREIGN KEY (CPF) REFERENCES Funcionario(CPF) ON DELETE CASCADE ON UPDATE CASCADE;
