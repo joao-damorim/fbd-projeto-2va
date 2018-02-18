@@ -16,7 +16,12 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Atividades<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="index.php?link=2">Listar</a></li>
+                <li><a href="index.php?link=6">Listar Departamento</a></li>
+                <li><a href="index.php?link=10">Listar Funcionário</a></li>
+                <li><a href="index.php?link=14">Listar Funcionário_ADM</a></li>
+                <li><a href="index.php?link=18">Listar Funcionário_Projeto</a></li>
+                <li><a href="index.php?link=22">Listar Projeto</a></li>
+                <li><a href="index.php?link=26">Listar Histórico_Funcionário</a></li>
                 <li><a href="index.php?link=3">Cadastrar</a></li>
               </ul>
             </li>

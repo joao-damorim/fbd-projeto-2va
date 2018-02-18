@@ -49,6 +49,32 @@
 		$pag[3] = "cad_usuario.php";
 		$pag[4] = "editar_usuario.php";
 		$pag[5] = "visual_usuario.php";
+        $pag[6] = "listar_departamento.php";
+		$pag[7] = "cad_departamento.php";
+		$pag[8] = "editar_departamento.php";
+		$pag[9] = "visual_departamento.php";
+        $pag[10] = "listar_funcionario.php";
+		$pag[11] = "cad_funcionario.php";
+		$pag[12] = "editar_funcionario.php";
+		$pag[13] = "visual_funcionario.php";
+        $pag[14] = "listar_funcionarioadm.php";
+		$pag[15] = "cad_funcionarioadm.php";
+		$pag[16] = "editar_funcionarioadm.php";
+		$pag[17] = "visual_funcionarioadm.php";
+        $pag[18] = "listar_funcionarioprojeto.php";
+		$pag[19] = "cad_funcionarioprojeto.php";
+		$pag[20] = "editar_funcionarioprojeto.php";
+		$pag[21] = "visual_funcionarioprojeto.php";
+        $pag[22] = "listar_projeto.php";
+		$pag[23] = "cad_projeto.php";
+		$pag[24] = "editar_projeto.php";
+		$pag[25] = "visual_projeto.php";
+        $pag[26] = "listar_historicofuncionario.php";
+		$pag[27] = "cad_historicofuncionario.php";
+		$pag[28] = "editar_historicofuncionario.php";
+		$pag[29] = "visual_historicofuncionario.php";
+     
+     
 		
 		
 		if(!empty($link)){
