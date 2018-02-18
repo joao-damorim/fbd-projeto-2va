@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<h1 class="text-center">Bem-vindo!</h1>
+<h3 class="text-center">Universidade Federal Rural de Pernambuco</h3>
+<h4 class="text-center">Bacharelado em Sistemas de Informação</h4>
+<h4 class="text-center">Fundamentos de Banco de Dados</h4>
+<h4 class="text-center">Professora: Roberta Mâcedo</h4>
+<br><h3 class="text-center">CRUD do Exercício 05</h3></br>
+<br><h3 class="text-center">Equipe</h3></br>
+<h5 class="text-center">João D'Amorim</h5>
+<h5 class="text-center">Jadiel</h5>
+<h5 class="text-center">Everton</h5>
+<br><h4 class="text-center">Clique em Atividades para iniciar!</h4></br>
