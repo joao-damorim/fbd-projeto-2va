@@ -16,13 +16,19 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Atividades<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="index.php?link=6">Listar Departamento</a></li>
-                <li><a href="index.php?link=10">Listar Funcionário</a></li>
-                <li><a href="index.php?link=14">Listar Funcionário_ADM</a></li>
-                <li><a href="index.php?link=18">Listar Funcionário_Projeto</a></li>
-                <li><a href="index.php?link=22">Listar Projeto</a></li>
-                <li><a href="index.php?link=26">Listar Histórico_Funcionário</a></li>
-                <li><a href="index.php?link=3">Cadastrar</a></li>
+                    <li><a href="index.php?link=6">Listar Departamento</a></li>
+                    <li><a href="index.php?link=10">Listar Funcionário</a></li>
+                    <li><a href="index.php?link=14">Listar Funcionário_ADM</a></li>
+                    <li><a href="index.php?link=18">Listar Funcionário_Projeto</a></li>
+                    <li><a href="index.php?link=22">Listar Projeto</a></li>
+                    <li><a href="index.php?link=26">Listar Histórico_Funcionário</a></li>
+             
+                    <li><a href="index.php?link=7">Cadastrar Departamento</a></li>
+                    <li><a href="index.php?link=11">Cadastrar Funcionário</a></li>
+                    <li><a href="index.php?link=15">Cadastrar Funcionário_ADM</a></li>
+                    <li><a href="index.php?link=19">Cadastrar Funcionário_Projeto</a></li>
+                    <li><a href="index.php?link=23">Cadastrar Projeto</a></li>
+                    <li><a href="index.php?link=27">Cadastrar Histórico_Funcionário</a></li>
               </ul>
             </li>
 			<li><a href="sair.php">Sair</a></li>
