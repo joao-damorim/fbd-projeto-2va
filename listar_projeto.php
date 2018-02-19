@@ -39,7 +39,7 @@
 						
 						<a href='index.php?link=4&id=<?php echo $linhas['id']; ?>'><button type='button' class='btn btn-sm btn-warning'>Editar</button></a>
 						
-						<a href='processa/proc_apagar_usuario.php?id=<?php echo $linhas['id']; ?>'><button type='button' class='btn btn-sm btn-danger'>Apagar</button></a>						
+						<a href='processa/proc_apagar_projeto.php?Codigo=<?php echo $linhas['Codigo']; ?>'><button type='button' class='btn btn-sm btn-danger'>Apagar</button></a>						
 						<?php
 						
 					echo "</tr>";

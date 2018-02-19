@@ -1,14 +1,27 @@
 ﻿<?php
-	session_start();
-	include_once("../seguranca.php");
-	include_once("../conexao.php");
-	$id = $_GET["id"];
+	include_once "../conexao.php";
+	$CPF = $_GET["CPF"];
 	
-	$query = mysql_query("DELETE FROM usuarios WHERE id = $id");
-	$resultado = mysql_query($query);
-	$linhas = mysql_affected_rows();
+    $sql = "DELETE FROM FuncionarioADM WHERE CPF= $CPF";
+
+    if ($conectar->query($sql) === TRUE) {
+        echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
+				http://localhost/fbd-projeto-2va/index.php?link=14'>
+				<script type=\"text/javascript\">
+					alert(\"Funcionário ADM apagado com sucesso.\");
+				</script>";
+        $conectar->close();
+    } else {
+        echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
+				http://localhost/fbd-projeto-2va/index.php?link=14'>
+				<script type=\"text/javascript\">
+					alert(\"Funcionário ADM não foi deletado com sucesso.\");
+				</script>";
+        $conectar->close();
+    }
 	
 ?>
+<!--
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -16,7 +29,7 @@
 	</head>
 	
 	<body>
-		<?php
+		?php
 		if(mysql_affected_rows() != 0){
 			echo"
 				<META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
