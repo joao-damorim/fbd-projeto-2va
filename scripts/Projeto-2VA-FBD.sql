@@ -3,48 +3,48 @@ CREATE DATABASE Projeto2VA;
 USE Projeto2VA;
 
 CREATE TABLE Departamento(
-	CodDept INT  NOT NULL,
+	CodDept INT ,
     Nome VARCHAR(100),
     Gerente VARCHAR(11)
     );
     
 CREATE TABLE Funcionario(
-	CPF VARCHAR(11) NOT NULL,
+	CPF VARCHAR(11) ,
     Nome VARCHAR(100),
     Telefone VARCHAR(20),
     Salario FLOAT,
     Tipo VARCHAR(30),
-    CodDept INT NOT NULL
+    CodDept INT
     );
 
 CREATE TABLE FuncionarioADM(
-	CPF VARCHAR(11) NOT NULL,
+	CPF VARCHAR(11) ,
     HorarioInicio TIME,
     HorarioSaida TIME, 
     NumSala INT
     );
 
 CREATE TABLE FuncionarioProjeto(
-	CPF VARCHAR(11) NOT NULL,
-    CodProjeto INT NOT NULL
+	CPF VARCHAR(11) ,
+    CodProjeto INT
     );
     
 CREATE TABLE Projeto(
-	Codigo INT NOT NULL,
+	Codigo INT ,
     Nome VARCHAR(100),
     DataInicial DATE,
     DataFinal DATE
     );
     
 CREATE TABLE Historico_Funcionario(
-	CPF CHAR(11) NOT NULL,
+	CPF CHAR(11) ,
     Cargo VARCHAR(100),
     DataInicial DATE,
     DataFinal DATE,
-    CodDept INT NOT NULL
+    CodDept INT
     );
     
-INSERT INTO Departamento (coddept, nome, gerente) VALUES
+INSERT INTO Departamento (codDept, nome, gerente) VALUES
 (1, 'Pesquisa','86648850825' ),
 (2, 'Administrativo', '55493753355'),
 (3, 'TI', '49155851156'),
