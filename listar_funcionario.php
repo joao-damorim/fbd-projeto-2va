@@ -31,19 +31,19 @@
 			<?php
 				while($linhas = mysqli_fetch_array($resultado)){
 					echo "<tr>";
-						echo "<td>".$linhas['cpf']."</td>";
-						echo "<td>".$linhas['nome']."</td>";
-						echo "<td>".$linhas['telefone']."</td>";
-						echo "<td>".$linhas['salario']."</td>";
-						echo "<td>".$linhas['tipo']."</td>";
-                        echo "<td>".$linhas['coddept']."</td>";
+						echo "<td>".$linhas['CPF']."</td>";
+						echo "<td>".$linhas['Nome']."</td>";
+						echo "<td>".$linhas['Telefone']."</td>";
+						echo "<td>".$linhas['Salario']."</td>";
+						echo "<td>".$linhas['Tipo']."</td>";
+                        echo "<td>".$linhas['CodDept']."</td>";
 						?>
 						<td>
 						<a href='index.php?link=5&id=<?php echo $linhas['id']; ?>'><button type='button' class='btn btn-sm btn-primary'>Visualizar</button></a>
 						
 						<a href='index.php?link=4&id=<?php echo $linhas['id']; ?>'><button type='button' class='btn btn-sm btn-warning'>Editar</button></a>
 						
-						<a href='processa/proc_apagar_usuario.php?id=<?php echo $linhas['id']; ?>'><button type='button' class='btn btn-sm btn-danger'>Apagar</button></a>						
+						<a href='processa/proc_apagar_funcionario.php?CPF=<?php echo $linhas['CPF']; ?>'><button type='button' class='btn btn-sm btn-danger'>Apagar</button></a>						
 						<?php
 						
 					echo "</tr>";
