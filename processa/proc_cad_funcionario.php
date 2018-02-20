@@ -12,12 +12,22 @@
     VALUES ('$cpf', '$nome', '$telefone', '$salario', '$tipo', '$CodDept')";
 
     if ($conectar->query($sql) === TRUE) {
-        echo "New record created successfully";
+        echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
+				http://localhost/fbd-projeto-2va/index.php?link=10'>
+				<script type=\"text/javascript\">
+					alert(\"Funcionário cadastrado com sucesso.\");
+				</script>
+                ";
+         $conectar->close();
     } else {
-        echo "Error: " . $sql . "<br>" . $conectar->error;
+        echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
+				http://localhost/fbd-projeto-2va/index.php?link=10'>
+				<script type=\"text/javascript\">
+					alert(\"Funcionário não foi cadastrado com sucesso.\");
+				</script>
+                ";
+         $conectar->close();
     }
-
-    $conectar->close();
 ?>
 <!DOCTYPE html>
 <!--
