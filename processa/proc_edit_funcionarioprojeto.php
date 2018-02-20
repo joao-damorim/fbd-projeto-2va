@@ -1,23 +1,38 @@
 ﻿<?php
-	session_start();
-	include_once("../seguranca.php");
 	include_once("../conexao.php");
-	$id = $_POST["id"];
-	$nome = $_POST["nome"];
-	$email = $_POST["email"];
-	$usuario = $_POST["usuario"];
-	$senha = $_POST["senha"];
-	$nivel_de_acesso_id = $_POST["nivel_de_acesso_id"];
-	$query = mysql_query("UPDATE usuarios set nome='$nome', email='$email', login='$usuario', senha='$senha', nivel_de_acesso_id='$nivel_de_acesso_id', modified = NOW() WHERE id='$id'");
+	$cpf = $_POST["CPF"];
+	$codprojeto = $_POST["CodProjeto"];
+	
+	$sql = "UPDATE funcionarioprojeto set CPF='$cpf', CodProjeto='$codprojeto' LIMIT 1";
+	
+	if ($conectar->query($sql) === TRUE) {
+        echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
+				http://localhost/fbd-projeto-2va/index.php?link=18'>
+				<script type=\"text/javascript\">
+					alert(\"Funcionário_Projeto cadastrado com sucesso.\");
+				</script>
+			";
+			$conectar->close();
+    } else {
+        echo "
+				<META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
+				http://localhost/fbd-projeto-2va/index.php?link=18'>
+				<script type=\"text/javascript\">
+					alert(\"Funcionário_Projeto não foi cadastrado com sucesso.\");
+				</script>
+			";
+			$conectar->close();
+    }
 ?>
 <!DOCTYPE html>
+<!--
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
 	</head>
 	
 	<body>
-		<?php
+		?php
 		if(mysql_affected_rows() != 0){
 			echo"
 				<META HTTP-EQUIV=REFRESH CONTENT = '0;URL =

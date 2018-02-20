@@ -1,8 +1,9 @@
 <?php
-	$id = $_GET['id'];
+    include_once ("conexao.php");
+	$cpf = $_GET['CPF'];
 	//Executa consulta
-	$result = mysql_query("SELECT * FROM usuarios WHERE id = '$id' LIMIT 1");
-	$resultado = mysql_fetch_assoc($result);
+	$result = mysqli_query($conectar, "SELECT * FROM FuncionarioProjeto WHERE CPF = '$cpf' LIMIT 1");
+	$resultado = mysqli_fetch_assoc($result);
 ?>
 <div class="container theme-showcase" role="main">
 
@@ -19,59 +20,24 @@
   </div>
   <div class="row">
 	<div class="col-md-12">
-		<form class="form-horizontal" method="POST" action="processa/proc_edit_usuario.php">
+		<form class="form-horizontal" method="POST" action="processa/proc_edit_funcionarioprojeto.php">
 		
 		  <div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 control-label">Nome</label>
+			<label for="inputEmail3" class="col-sm-2 control-label">CPF</label>
 			<div class="col-sm-10">
-			  <input type="text" class="form-control" name="nome" placeholder="Nome Completo" value="<?php echo $resultado['nome']; ?>">
+			  <input type="text" class="form-control" name="CPF" placeholder="XXXXXXXXXXX" value="<?php echo $resultado['CPF']; ?>">
 			</div>
 		  </div>
 		  
 		  <div class="form-group">
-			<label for="inputPassword3" class="col-sm-2 control-label">E-mail</label>
+			<label for="inputPassword3" class="col-sm-2 control-label">CodProjeto</label>
 			<div class="col-sm-10">
-			  <input type="email" class="form-control" name="email" placeholder="E-mail" value="<?php echo $resultado['email']; ?>">
+			  <input type="text" class="form-control" name="CodProjeto" placeholder="Código do Projeto" value="<?php echo $resultado['CodProjeto']; ?>">
 			</div>
 		  </div>
+		
 		  
-		  <div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 control-label">Usuário</label>
-			<div class="col-sm-10">
-			  <input type="text" class="form-control" name="usuario" placeholder="Usuário" value="<?php echo $resultado['login']; ?>">
-			</div>
-		  </div>
-		  
-		  <div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 control-label">Senha</label>
-			<div class="col-sm-10">
-			  <input type="password" class="form-control" name="senha" placeholder="Senha">
-			</div>
-		  </div>
-		  
-		  <div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 control-label">Nível de Acesso</label>
-			<div class="col-sm-10">
-				<select class="form-control" name="nivel_de_acesso_id">
-				  <option value="1"
-			      <?php
-					if($resultado['nivel_de_acesso_id'] == 1){
-						echo 'selected';
-					}
-				  ?>
-				  >Administrativo</option>				  
-				  <option value="2"
-				  <?php
-					if( $resultado['nivel_de_acesso_id'] == 2){
-						echo 'selected';
-					}
-				  ?>
-				  >Usuário</option>
-				</select>
-			</div>
-		  </div>
-		  
-		  <input type="hidden" name="id" value=<?php echo $resultado['id']?>>
+		  <input type="hidden" name="CPF" value=<?php echo $resultado['CPF']?>>
 		  <div class="form-group">
 			<div class="col-sm-offset-2 col-sm-10">
 			  <button type="submit" class="btn btn-success">Editar</button>

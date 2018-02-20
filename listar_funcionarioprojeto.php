@@ -31,9 +31,9 @@
 						echo "<td>".$linhas['CodProjeto']."</td>";
 						?>
 						<td>
-						<a href='index.php?link=5&id=<?php echo $linhas['id']; ?>'><button type='button' class='btn btn-sm btn-primary'>Visualizar</button></a>
+						<a href='index.php?link=20&CPF=<?php echo $linhas['id']; ?>'><button type='button' class='btn btn-sm btn-primary'>Visualizar</button></a>
 						
-						<a href='index.php?link=4&id=<?php echo $linhas['id']; ?>'><button type='button' class='btn btn-sm btn-warning'>Editar</button></a>
+						<a href='index.php?link=20&CPF=<?php echo $linhas['CPF']; ?>'><button type='button' class='btn btn-sm btn-warning'>Editar</button></a>
 						
 						<a href='processa/proc_apagar_funcionarioprojeto.php?CPF=<?php echo $linhas['CPF']; ?>'><button type='button' class='btn btn-sm btn-danger'>Apagar</button></a>						
 						<?php
