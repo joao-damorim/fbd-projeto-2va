@@ -6,16 +6,28 @@
     $datafinal = $_POST["DataFinal"];
 	#$query = mysqli_query($conectar, "INSERT INTO departamento (CodDept, Nome, Gerente) VALUES ('$coddept', '$nome', '$gerente', NOW())");
 
-    $sql = "INSERT INTO departamento (Codigot, Nome, DataInicial, DataFinal)
+    $sql = "INSERT INTO Projeto (Codigo, Nome, DataInicial, DataFinal)
     VALUES ('$codigo', '$nome', '$datainicial', '$datafinal')";
 
     if ($conectar->query($sql) === TRUE) {
-        echo "New record created successfully";
+        echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
+				http://localhost/fbd-projeto-2va/index.php?link=22'>
+				<script type=\"text/javascript\">
+					alert(\"Projeto cadastrado com sucesso.\");
+				</script>
+			";
+			$conectar->close();
     } else {
-        echo "Error: " . $sql . "<br>" . $conectar->error;
+        echo "
+				<META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
+				http://localhost/fbd-projeto-2va/index.php?link=22'>
+				<script type=\"text/javascript\">
+					alert(\"Projeto não foi cadastrado com sucesso.\");
+				</script>
+			";
+			$conectar->close();
     }
 
-    $conectar->close();
 ?>
 <!DOCTYPE html>
 <!--
