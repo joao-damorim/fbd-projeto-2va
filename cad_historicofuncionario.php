@@ -2,7 +2,7 @@
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="page-header">
-	<h1>Cadastrar Usuário</h1>
+	<h1>Cadastrar Histórico_Funcionário</h1>
   </div>
   <div class="row espaco">
 		<div class="pull-right">
@@ -11,48 +11,43 @@
   </div>
   <div class="row">
 	<div class="col-md-12">
-		<form class="form-horizontal" method="POST" action="processa/proc_cad_usuario.php">
+		<form class="form-horizontal" method="POST" action="processa/proc_cad_historicofuncionario.php">
 		
 		  <div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 control-label">Nome</label>
+			<label for="inputEmail3" class="col-sm-2 control-label">CPF</label>
 			<div class="col-sm-10">
-			  <input type="text" class="form-control" name="nome" placeholder="Nome Completo">
+			  <input type="text" class="form-control" name="CPF" placeholder="Somente números">
 			</div>
 		  </div>
 		  
 		  <div class="form-group">
-			<label for="inputPassword3" class="col-sm-2 control-label">E-mail</label>
+			<label for="inputPassword3" class="col-sm-2 control-label">Cargo</label>
 			<div class="col-sm-10">
-			  <input type="email" class="form-control" name="email" placeholder="E-mail">
+			  <input type="text" class="form-control" name="Cargo" placeholder="Cargo do funcionário">
 			</div>
 		  </div>
 		  
 		  <div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 control-label">Usuário</label>
+			<label for="inputEmail3" class="col-sm-2 control-label">Data Inicial</label>
 			<div class="col-sm-10">
-			  <input type="text" class="form-control" name="usuario" placeholder="Usuário">
+			  <input type="text" class="form-control" name="DataInicial" placeholder="YYYY-MM-DD">
 			</div>
 		  </div>
-		  
-		  <div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 control-label">Senha</label>
+            
+            <div class="form-group">
+			<label for="inputEmail3" class="col-sm-2 control-label">Data Final</label>
 			<div class="col-sm-10">
-			  <input type="password" class="form-control" name="senha" placeholder="Senha">
+			  <input type="text" class="form-control" name="DataFinal" placeholder="YYYY-MM-DD">
 			</div>
 		  </div>
-		  
-		  <div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 control-label">Nível de Acesso</label>
+            
+            <div class="form-group">
+			<label for="inputEmail3" class="col-sm-2 control-label">Código do Departamento</label>
 			<div class="col-sm-10">
-				<select class="form-control" name="nivel_de_acesso_id">
-				  <option>Selecione</option>
-				  <option value="1">Administrativo</option>
-				  <option value="2">Usuário</option>
-				</select>
+			  <input type="text" class="form-control" name="CodDept" placeholder="Ex: 1">
 			</div>
 		  </div>
-		  
-		  
+	
 		  <div class="form-group">
 			<div class="col-sm-offset-2 col-sm-10">
 			  <button type="submit" class="btn btn-success">Cadastrar</button>

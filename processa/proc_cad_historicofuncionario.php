@@ -8,15 +8,26 @@
 	#$query = mysqli_query($conectar, "INSERT INTO departamento (CodDept, Nome, Gerente) VALUES ('$coddept', '$nome', '$gerente', NOW())");
 
     $sql = "INSERT INTO departamento (CPF, Cargo, DataInicial, DataFinal, CodDept)
-    VALUES ('$cpf', '$cargo', '$dataincial', '$datafinal', '$coddept')";
+    VALUES ('$cpf', '$cargo', '$datainicial', '$datafinal', '$coddept')";
 
     if ($conectar->query($sql) === TRUE) {
-        echo "New record created successfully";
+        echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
+				http://localhost/fbd-projeto-2va/index.php?link=26'>
+				<script type=\"text/javascript\">
+					alert(\"Histórico_Funcionário cadastrado com sucesso.\");
+				</script>
+                ";
+         $conectar->close();
     } else {
-        echo "Error: " . $sql . "<br>" . $conectar->error;
+        echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
+				http://localhost/fbd-projeto-2va/index.php?link=26'>
+				<script type=\"text/javascript\">
+					alert(\"Histórico_Funcionário não foi cadastrado com sucesso.\");
+				</script>
+                ";
+         $conectar->close();
     }
 
-    $conectar->close();
 ?>
 <!DOCTYPE html>
 <!--
