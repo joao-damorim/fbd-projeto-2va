@@ -35,7 +35,7 @@
 						<td>
 						<a href='index.php?link=5&id=<?php echo $linhas['id']; ?>'><button type='button' class='btn btn-sm btn-primary'>Visualizar</button></a>
 						
-						<a href='index.php?link=4&id=<?php echo $linhas['id']; ?>'><button type='button' class='btn btn-sm btn-warning'>Editar</button></a>
+						<a href='index.php?link=8&CodDept=<?php echo $linhas['CodDept']; ?>'><button type='button' class='btn btn-sm btn-warning'>Editar</button></a>
 						
 						<a href='processa/proc_apagar_departamento.php?CodDept=<?php echo $linhas['CodDept']; ?>'><button type='button' class='btn btn-sm btn-danger'>Apagar</button></a>						
 						<?php
