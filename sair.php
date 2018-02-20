@@ -1,6 +1,6 @@
 ﻿<?php
-	session_start();
-	session_destroy();	  
+	#session_start();
+	#session_destroy();	  
 	//Redirecionar o usuário para a página de login
-	header("Location: http://interceptors.esy.es/");
+	header("Location: http://google.com/");
 ?>
