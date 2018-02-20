@@ -16,12 +16,12 @@
 		  <div class="form-group">
 			<label for="inputEmail3" class="col-sm-2 control-label">CPF</label>
 			<div class="col-sm-10">
-			  <input type="text" class="form-control" name="CPF" placeholder="XXX.XXX.XXX-XX">
+			  <input type="text" class="form-control" name="CPF" placeholder="XXXXXXXXXXX">
 			</div>
 		  </div>
 		  
 		  <div class="form-group">
-			<label for="inputPassword3" class="col-sm-2 control-label">CodProjeto</label>
+			<label for="inputPassword3" class="col-sm-2 control-label">Código do Projeto</label>
 			<div class="col-sm-10">
 			  <input type="text" class="form-control" name="CodProjeto" placeholder="Código do Projeto">
 			</div>

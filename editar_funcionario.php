@@ -1,83 +1,79 @@
 <?php
-	$id = $_GET['id'];
+    include_once "conexao.php";
+	$cpf = $_GET['CPF'];
 	//Executa consulta
-	$result = mysql_query("SELECT * FROM usuarios WHERE id = '$id' LIMIT 1");
-	$resultado = mysql_fetch_assoc($result);
+	$result = mysqli_query($conectar, "SELECT * FROM funcionario WHERE CPF = '$cpf' LIMIT 1");
+	$resultado = mysqli_fetch_assoc($result);
 ?>
 <div class="container theme-showcase" role="main">
 
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="page-header">
-	<h1>Editar Usuário</h1>
-  </div>
-  <div class="row espaco">
-	<div class="pull-right">
-		<a href='administrativo.php?link=2&id=<?php echo $resultado['id']; ?>'><button type='button' class='btn btn-sm btn-primary'>Listar</button></a>		
-						
-		<a href='processa/proc_apagar_usuario.php?id=<?php echo $resultado['id']; ?>'><button type='button' class='btn btn-sm btn-danger'>Apagar</button></a>
-	</div>
-  </div>
-  <div class="row">
-	<div class="col-md-12">
-		<form class="form-horizontal" method="POST" action="processa/proc_edit_usuario.php">
-		
-		  <div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 control-label">Nome</label>
-			<div class="col-sm-10">
-			  <input type="text" class="form-control" name="nome" placeholder="Nome Completo" value="<?php echo $resultado['nome']; ?>">
-			</div>
-		  </div>
-		  
-		  <div class="form-group">
-			<label for="inputPassword3" class="col-sm-2 control-label">E-mail</label>
-			<div class="col-sm-10">
-			  <input type="email" class="form-control" name="email" placeholder="E-mail" value="<?php echo $resultado['email']; ?>">
-			</div>
-		  </div>
-		  
-		  <div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 control-label">Usuário</label>
-			<div class="col-sm-10">
-			  <input type="text" class="form-control" name="usuario" placeholder="Usuário" value="<?php echo $resultado['login']; ?>">
-			</div>
-		  </div>
-		  
-		  <div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 control-label">Senha</label>
-			<div class="col-sm-10">
-			  <input type="password" class="form-control" name="senha" placeholder="Senha">
-			</div>
-		  </div>
-		  
-		  <div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 control-label">Nível de Acesso</label>
-			<div class="col-sm-10">
-				<select class="form-control" name="nivel_de_acesso_id">
-				  <option value="1"
-			      <?php
-					if($resultado['nivel_de_acesso_id'] == 1){
-						echo 'selected';
-					}
-				  ?>
-				  >Administrativo</option>				  
-				  <option value="2"
-				  <?php
-					if( $resultado['nivel_de_acesso_id'] == 2){
-						echo 'selected';
-					}
-				  ?>
-				  >Usuário</option>
-				</select>
-			</div>
-		  </div>
-		  
-		  <input type="hidden" name="id" value=<?php echo $resultado['id']?>>
-		  <div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
-			  <button type="submit" class="btn btn-success">Editar</button>
-			</div>
-		  </div>
-		</form>
-	</div>
-  </div>
-</div> <!-- /container -->
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="page-header">
+        <h1>Editar Funcionário</h1>
+    </div>
+    <div class="row espaco">
+        <div class="pull-right">
+            <a href='administrativo.php?link=2&id=<?php echo $resultado[' id ']; ?>'><button type='button' class='btn btn-sm btn-primary'>Listar</button></a>
+
+            <a href='processa/proc_apagar_usuario.php?id=<?php echo $resultado[' id ']; ?>'><button type='button' class='btn btn-sm btn-danger'>Apagar</button></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-horizontal" method="POST" action="processa/proc_edit_funcionario.php">
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">CPF</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="CPF" placeholder="XXXXXXXXXXX" value="<?php echo $resultado['CPF']; ?>">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">Nome</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="Nome" placeholder="Nome do Funcionário" value="<?php echo $resultado['Nome']; ?>">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Telefone</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="Telefone" placeholder="XXXXXXXXXXX" value="<?php echo $resultado['Telefone']; ?>">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Salario</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="Salario" placeholder="XXXX" value="<?php echo $resultado['Salario']; ?>">
+                    </div>
+                </div>
+
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Tipo</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="Tipo" placeholder="XX" value="<?php echo $resultado['Tipo']; ?>">
+                        </div>
+                    </div>
+              
+
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">CodDept</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="CodDept" placeholder="XX" value="<?php echo $resultado['CodDept']; ?>">
+                        </div>
+                    </div>
+                
+
+                    <input type="hidden" name="CPF" value=<?php echo $resultado[ 'CPF']?>>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-success">Editar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
