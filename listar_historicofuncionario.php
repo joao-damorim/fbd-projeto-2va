@@ -23,6 +23,7 @@
 			<th>Cargo</th>
 			<th>Data_Inicial</th>
 			<th>Data_Final</th>
+            <th>CodDept</th>
 		  </tr>
 		</thead>
 		<tbody>
@@ -33,11 +34,12 @@
 						echo "<td>".$linhas['Cargo']."</td>";
 						echo "<td>".$linhas['DataInicial']."</td>";
 						echo "<td>".$linhas['DataFinal']."</td>";
+                        echo "<td>".$linhas['CodDept']."</td>";
 						?>
 						<td>
 						<a href='index.php?link=5&id=<?php echo $linhas['id']; ?>'><button type='button' class='btn btn-sm btn-primary'>Visualizar</button></a>
 						
-						<a href='index.php?link=4&id=<?php echo $linhas['id']; ?>'><button type='button' class='btn btn-sm btn-warning'>Editar</button></a>
+						<a href='index.php?link=28&CPF=<?php echo $linhas['CPF']; ?>'><button type='button' class='btn btn-sm btn-warning'>Editar</button></a>
 						
 						<a href='processa/proc_apagar_historicofuncionario.php?CPF=<?php echo $linhas['CPF']; ?>'><button type='button' class='btn btn-sm btn-danger'>Apagar</button></a>						
 						<?php
