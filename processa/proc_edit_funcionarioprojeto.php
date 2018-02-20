@@ -3,7 +3,7 @@
 	$cpf = $_POST["CPF"];
 	$codprojeto = $_POST["CodProjeto"];
 	
-	$sql = "UPDATE funcionarioprojeto set CPF='$cpf', CodProjeto='$codprojeto' LIMIT 1";
+	$sql = "UPDATE funcionarioprojeto set CPF='$cpf', CodProjeto='$codprojeto' WHERE CPF='$cpf'";
 	
 	if ($conectar->query($sql) === TRUE) {
         echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL =

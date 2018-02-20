@@ -2,14 +2,14 @@
     include_once ("conexao.php");
 	$cpf = $_GET['CPF'];
 	//Executa consulta
-	$result = mysqli_query($conectar, "SELECT * FROM FuncionarioProjeto WHERE CPF = '$cpf' LIMIT 1");
+	$result = mysqli_query($conectar, "SELECT * FROM funcionarioprojeto WHERE CPF = '$cpf' LIMIT 1");
 	$resultado = mysqli_fetch_assoc($result);
 ?>
 <div class="container theme-showcase" role="main">
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="page-header">
-	<h1>Editar Usuário</h1>
+      <h1>Editar Funcionário_Projeto</h1>
   </div>
   <div class="row espaco">
 	<div class="pull-right">
@@ -30,9 +30,9 @@
 		  </div>
 		  
 		  <div class="form-group">
-			<label for="inputPassword3" class="col-sm-2 control-label">CodProjeto</label>
+			<label for="inputPassword3" class="col-sm-2 control-label">Código do Projeto</label>
 			<div class="col-sm-10">
-			  <input type="text" class="form-control" name="CodProjeto" placeholder="Código do Projeto" value="<?php echo $resultado['CodProjeto']; ?>">
+			  <input type="text" class="form-control" name="CodProjeto" placeholder="Ex: 1" value="<?php echo $resultado['CodProjeto']; ?>">
 			</div>
 		  </div>
 		
