@@ -38,14 +38,14 @@
 		  <div class="form-group">
 			<label for="inputEmail3" class="col-sm-2 control-label">Data Inicial</label>
 			<div class="col-sm-10">
-			  <input type="text" class="form-control" name="DataInicial" placeholder="YYYY-MM-DD" value="<?php echo $resultado['DataInicial']; ?>">
+			  <input type="date" class="form-control" name="DataInicial" placeholder="YYYY-MM-DD" value="<?php echo $resultado['DataInicial']; ?>">
 			</div>
 		  </div>
             
             <div class="form-group">
 			<label for="inputEmail3" class="col-sm-2 control-label">Data Final</label>
 			<div class="col-sm-10">
-			  <input type="text" class="form-control" name="DataFinal" placeholder="YYYY-MM-DD" value="<?php echo $resultado['DataFinal']; ?>">
+			  <input type="date" class="form-control" name="DataFinal" placeholder="YYYY-MM-DD" value="<?php echo $resultado['DataFinal']; ?>">
 			</div>
 		  </div>
             
