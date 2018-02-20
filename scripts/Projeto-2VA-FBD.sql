@@ -101,26 +101,26 @@ INSERT INTO FuncionarioProjeto (cpf, codprojeto) VALUES
 ('96803988903',3),
 ('69167197474',3);
 
-INSERT INTO Historico_Funcionario (cpf, cargo, DataInicial) VALUES
-('86648850825', 'Gerente de Pesquisa', 2012-08-10),
-('96803988903', 'Engenheiro', 2013-01-15),
-('69167197474', 'Engenheiro', 2012-08-10),
-('55493753355', 'Gerente Administrativo', 2012-08-10),
-('31262763260', 'Técnico de Infórmática', 2015-05-15),
-('45511187916', 'Técnico de Informática', 2015-05-215),
-('49155851156', 'Gerente de TI', 2015-08-01),
-('39386158365', 'Designer', 2012-08-10),
-('64003189228', 'Desenvolvedor', 2012-08-10),
-('16044449497', 'Engenheira do Trabalho', 2012-08-10),
-('39238634863', 'Segurança do Trabalho', 2012-08-10),
-('48155852157', 'Gerente de Marketing', 2013-11-20),
-('74588684899', 'Atendente', 2012-08-10),
-('57277172262', 'Publicitário', 2014-09-30),
-('58219869565', 'Publicitário', 2014-09-30),
-('12243738121', 'Promotor de Vendas', 2012-08-10),
-('44229943541', 'Gerente de RH', 2014-04-03),
-('37082281583', 'Assistente de RH', 2015-08-16),
-('57845863486', 'Assistente de RH', 2015-03-12);
+INSERT INTO Historico_Funcionario (cpf, cargo, DataInicial, coddept) VALUES
+('86648850825', 'Gerente de Pesquisa', 2012-08-10, 1),
+('96803988903', 'Engenheiro', 2013-01-15, 1),
+('69167197474', 'Engenheiro', 2012-08-10, 1),
+('55493753355', 'Gerente Administrativo', 2012-08-10, 2),
+('31262763260', 'Técnico de Infórmática', 2015-05-15, 2),
+('45511187916', 'Técnico de Informática', 2015-05-215, 2),
+('49155851156', 'Gerente de TI', 2015-08-01, 3),
+('39386158365', 'Designer', 2012-08-10, 3),
+('64003189228', 'Desenvolvedor', 2012-08-10, 3),
+('16044449497', 'Engenheira do Trabalho', 2012-08-10, 4),
+('39238634863', 'Segurança do Trabalho', 2012-08-10, 4),
+('48155852157', 'Gerente de Marketing', 2013-11-20, 5),
+('74588684899', 'Atendente', 2012-08-10, 5),
+('57277172262', 'Publicitário', 2014-09-30, 5),
+('58219869565', 'Publicitário', 2014-09-30, 5),
+('12243738121', 'Promotor de Vendas', 2012-08-10, 5),
+('44229943541', 'Gerente de RH', 2014-04-03, 6),
+('37082281583', 'Assistente de RH', 2015-08-16, 6),
+('57845863486', 'Assistente de RH', 2015-03-12, 6);
     
 ALTER TABLE Departamento ADD PRIMARY KEY(CodDept);
 ALTER TABLE Funcionario ADD PRIMARY KEY(CPF);
