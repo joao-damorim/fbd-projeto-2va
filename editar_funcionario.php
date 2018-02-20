@@ -7,7 +7,6 @@
 ?>
 <div class="container theme-showcase" role="main">
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="page-header">
         <h1>Editar Funcionário</h1>
     </div>
@@ -76,4 +75,3 @@
             </div>
         </div>
     </div>
-    <!-- /container -->

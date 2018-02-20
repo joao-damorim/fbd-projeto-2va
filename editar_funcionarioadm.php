@@ -1,13 +1,12 @@
 <?php
-include_once "conexao.php";
-$cpf = $_GET['CPF'];
-//Executa consulta
-$result = mysqli_query($conectar, "SELECT * FROM funcionarioadm WHERE CPF = '$cpf' LIMIT 1");
-$resultado = mysqli_fetch_assoc($result);
+    include_once "conexao.php";
+    $cpf = $_GET['CPF'];
+    //Executa consulta
+    $result = mysqli_query($conectar, "SELECT * FROM funcionarioadm WHERE CPF = '$cpf' LIMIT 1");
+    $resultado = mysqli_fetch_assoc($result);
 ?>
 <div class="container theme-showcase" role="main">
 
-  <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="page-header">
 	<h1>Editar Funcionário_ADM</h1>
   </div>
@@ -59,4 +58,4 @@ $resultado = mysqli_fetch_assoc($result);
 		</form>
 	</div>
   </div>
-</div> <!-- /container -->
+</div> 

@@ -40,7 +40,7 @@
 	<?php
 		include_once("menu_admin.php");
 		
-		//$link = isset($_GET['link']) ? $_GET['link'] : 1;
+		#$link = isset($_GET['link']) ? $_GET['link'] : 1;
 		if(isset($_GET['link'])){
 			$link = $_GET["link"];
 		}
@@ -74,9 +74,6 @@
 		$pag[28] = "editar_historicofuncionario.php";
 		$pag[29] = "visual_historicofuncionario.php";
      
-     
-		
-		
 		if(!empty($link)){
 			if(file_exists($pag[$link])){
 				include $pag[$link];

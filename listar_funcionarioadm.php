@@ -5,15 +5,10 @@
 ?>
 <div class="container theme-showcase" role="main">
 
-  <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="page-header">
 	<h1>Lista de Funcionário_ADM</h1>
   </div>
-  <div class="row espaco">
-	<div class="pull-right">
-		<a href="index.php?link=3"<button type='button' class='btn btn-sm btn-success'>Cadastrar</button></a>		
-	</div>
-  </div>
+ 
   <div class="row">
 	<div class="col-md-12">
 	  <table class="table">
@@ -35,7 +30,6 @@
 						echo "<td>".$linhas['NumSala']."</td>";
 						?>
 						<td>
-						<a href='index.php?link=5&id=<?php echo $linhas['id']; ?>'><button type='button' class='btn btn-sm btn-primary'>Visualizar</button></a>
 						
 						<a href='index.php?link=16&CPF=<?php echo $linhas['CPF']; ?>'><button type='button' class='btn btn-sm btn-warning'>Editar</button></a>
 						
@@ -49,7 +43,7 @@
 	  </table>
 	</div>
   </div>
-</div> <!-- /container -->
+</div>
 
 
    
