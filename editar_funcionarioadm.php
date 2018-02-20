@@ -2,7 +2,7 @@
 include_once "conexao.php";
 $cpf = $_GET['CPF'];
 //Executa consulta
-$result = mysqli_query($conectar, "SELECT * FROM funcionárioadm WHERE CPF = '$cpf' LIMIT 1");
+$result = mysqli_query($conectar, "SELECT * FROM funcionarioadm WHERE CPF = '$cpf' LIMIT 1");
 $resultado = mysqli_fetch_assoc($result);
 ?>
 <div class="container theme-showcase" role="main">
