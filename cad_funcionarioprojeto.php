@@ -12,14 +12,14 @@
 		  <div class="form-group">
 			<label for="inputEmail3" class="col-sm-2 control-label">CPF</label>
 			<div class="col-sm-10">
-			  <input type="text" class="form-control" name="CPF" placeholder="XXXXXXXXXXX">
+			  <input type="text" class="form-control" name="CPF" placeholder="Ex: 12345678912">
 			</div>
 		  </div>
 		  
 		  <div class="form-group">
 			<label for="inputPassword3" class="col-sm-2 control-label">Código do Projeto</label>
 			<div class="col-sm-10">
-			  <input type="text" class="form-control" name="CodProjeto" placeholder="Código do Projeto">
+			  <input type="text" class="form-control" name="CodProjeto" placeholder="Ex: 1">
 			</div>
 		  </div>
 		  

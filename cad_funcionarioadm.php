@@ -11,19 +11,19 @@
 		  <div class="form-group">
 			<label for="inputEmail3" class="col-sm-2 control-label">CPF</label>
 			<div class="col-sm-10">
-			  <input type="text" class="form-control" name="CPF" placeholder="XXXXXXXXXXX">
+			  <input type="text" class="form-control" name="CPF" placeholder="Ex: 12345678912">
 			</div>
 		  </div>
 		  
 		  <div class="form-group">
-			<label for="inputPassword3" class="col-sm-2 control-label">Horário de Inicio</label>
+			<label for="inputPassword3" class="col-sm-2 control-label">Horário de Início</label>
 			<div class="col-sm-10">
 			  <input type="text" class="form-control" name="HorarioInicio" placeholder="HH:MM:SS">
 			</div>
 		  </div>
 		  
 		  <div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 control-label">Horário de Saida</label>
+			<label for="inputEmail3" class="col-sm-2 control-label">Horário de Saída</label>
 			<div class="col-sm-10">
 			  <input type="text" class="form-control" name="HorarioSaida" placeholder="HH:MM:SS">
 			</div>
@@ -32,7 +32,7 @@
 		  <div class="form-group">
 			<label for="inputEmail3" class="col-sm-2 control-label">Número da Sala</label>
 			<div class="col-sm-10">
-			  <input type="text" class="form-control" name="NumSala" placeholder="Sala">
+			  <input type="text" class="form-control" name="NumSala" placeholder="Ex: 10">
 			</div>
 		  </div>
 		  

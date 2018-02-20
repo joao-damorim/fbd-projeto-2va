@@ -11,14 +11,14 @@
 		  <div class="form-group">
 			<label for="inputEmail3" class="col-sm-2 control-label">CPF</label>
 			<div class="col-sm-10">
-			  <input type="text" class="form-control" name="CPF" placeholder="Somente números">
+			  <input type="text" class="form-control" name="CPF" placeholder="Ex: 12345678912">
 			</div>
 		  </div>
 		  
 		  <div class="form-group">
 			<label for="inputPassword3" class="col-sm-2 control-label">Cargo</label>
 			<div class="col-sm-10">
-			  <input type="text" class="form-control" name="Cargo" placeholder="Cargo do funcionário">
+			  <input type="text" class="form-control" name="Cargo" placeholder="Cargo do Funcionário">
 			</div>
 		  </div>
 		  

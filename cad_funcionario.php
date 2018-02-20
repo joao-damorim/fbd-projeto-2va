@@ -11,35 +11,35 @@
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">CPF</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="CPF" placeholder="CPF">
+                        <input type="text" class="form-control" name="CPF" placeholder="Ex: 12345678912">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="inputPassword3" class="col-sm-2 control-label">Nome</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="Nome" placeholder="Nome">
+                        <input type="text" class="form-control" name="Nome" placeholder="Nome do Funcionário">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Telefone</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="Telefone" placeholder="Telefone">
+                        <input type="text" class="form-control" name="Telefone" placeholder="Ex: 81988884444">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Salario</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="Salario" placeholder="Salario">
+                        <input type="text" class="form-control" name="Salario" placeholder="Ex: 10000">
                     </div>
 
                 </div>
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Tipo</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="Tipo" placeholder="Tipo">
+                        <input type="text" class="form-control" name="Tipo" placeholder="Ex: 2">
                     </div>
                 </div>
                 <div class="form-group">

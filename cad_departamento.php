@@ -25,7 +25,7 @@
 		  <div class="form-group">
 			<label for="inputEmail3" class="col-sm-2 control-label">Gerente</label>
 			<div class="col-sm-10">
-			  <input type="text" class="form-control" name="Gerente" placeholder="Gerente do Projeto">
+			  <input type="text" class="form-control" name="Gerente" placeholder="Gerente do Projeto (CPF) - Ex: 12345678912">
 			</div>
 		  </div>
 		    
