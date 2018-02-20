@@ -9,12 +9,24 @@
     VALUES ('$coddept', '$nome', '$gerente')";
 
     if ($conectar->query($sql) === TRUE) {
-        echo "New record created successfully";
+        echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
+				http://localhost/fbd-projeto-2va/index.php?link=6'>
+				<script type=\"text/javascript\">
+					alert(\"Departamento cadastrado com sucesso.\");
+				</script>
+                ";
+         $conectar->close();
     } else {
-        echo "Error: " . $sql . "<br>" . $conectar->error;
+        echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
+				http://localhost/fbd-projeto-2va/index.php?link=6'>
+				<script type=\"text/javascript\">
+					alert(\"Departamento não foi cadastrado com sucesso.\");
+				</script>
+                ";
+         $conectar->close();
     }
 
-    $conectar->close();
+   
 ?>
 <!DOCTYPE html>
 <!--

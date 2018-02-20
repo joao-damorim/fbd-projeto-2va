@@ -23,7 +23,7 @@
 		  <div class="form-group">
 			<label for="inputPassword3" class="col-sm-2 control-label">Nome</label>
 			<div class="col-sm-10">
-			  <input type="text" class="form-control" name="Nome" placeholder="Nome do Funcionário">
+			  <input type="text" class="form-control" name="Nome" placeholder="Nome do Departamento">
 			</div>
 		  </div>
 		  
