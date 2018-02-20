@@ -102,25 +102,25 @@ INSERT INTO FuncionarioProjeto (cpf, codprojeto) VALUES
 ('69167197474',3);
 
 INSERT INTO Historico_Funcionario (cpf, cargo, DataInicial) VALUES
-('86648850825', 'Gerente de Pesquisa', 10-08-2012),
-('96803988903', 'Engenheiro', 20-01-2013),
-('69167197474', 'Engenheiro', 10-08-2012),
-('55493753355', 'Gerente Administrativo', 10-08-2012),
-('31262763260', 'Técnico de Infórmática', 15-05-2015),
-('45511187916', 'Técnico de Informática', 15-05-2015),
-('49155851156', 'Gerente de TI', 10-08-2012),
-('39386158365', 'Designer', 10-08-2012),
-('64003189228', 'Desenvolvedor', 10-08-2012),
-('16044449497', 'Engenheira do Trabalho', 10-08-2012),
-('39238634863', 'Segurança do Trabalho', 10-08-2012),
-('48155852157', 'Gerente de Marketing', 20-11-2013),
-('74588684899', 'Atendente', 10-08-2012),
-('57277172262', 'Publicitário', 15-09-2014),
-('58219869565', 'Publicitário', 30-09-2014),
-('12243738121', 'Promotor de Vendas', 10-08-2012),
-('44229943541', 'Gerente de RH', 03-04-2014),
-('37082281583', 'Assistente de RH', 16-08-2015),
-('57845863486', 'Assistente de RH', 01-03-2015);
+('86648850825', 'Gerente de Pesquisa', 2012-08-10),
+('96803988903', 'Engenheiro', 2013-01-15),
+('69167197474', 'Engenheiro', 2012-08-10),
+('55493753355', 'Gerente Administrativo', 2012-08-10),
+('31262763260', 'Técnico de Infórmática', 2015-05-15),
+('45511187916', 'Técnico de Informática', 2015-05-215),
+('49155851156', 'Gerente de TI', 2015-08-01),
+('39386158365', 'Designer', 2012-08-10),
+('64003189228', 'Desenvolvedor', 2012-08-10),
+('16044449497', 'Engenheira do Trabalho', 2012-08-10),
+('39238634863', 'Segurança do Trabalho', 2012-08-10),
+('48155852157', 'Gerente de Marketing', 2013-11-20),
+('74588684899', 'Atendente', 2012-08-10),
+('57277172262', 'Publicitário', 2014-09-30),
+('58219869565', 'Publicitário', 2014-09-30),
+('12243738121', 'Promotor de Vendas', 2012-08-10),
+('44229943541', 'Gerente de RH', 2014-04-03),
+('37082281583', 'Assistente de RH', 2015-08-16),
+('57845863486', 'Assistente de RH', 2015-03-12);
     
 ALTER TABLE Departamento ADD PRIMARY KEY(CodDept);
 ALTER TABLE Funcionario ADD PRIMARY KEY(CPF);
@@ -130,8 +130,8 @@ ALTER TABLE Projeto ADD PRIMARY KEY(Codigo);
 ALTER TABLE Historico_Funcionario ADD PRIMARY KEY(CPF, DataInicial);
 
 
-ALTER TABLE Departamento ADD FOREIGN KEY (Gerente) REFERENCES Funcionario(CPF) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE Funcionario ADD FOREIGN KEY (CodDept) REFERENCES Departamento (CodDept) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE Departamento ADD FOREIGN KEY (Gerente) REFERENCES Funcionario(CPF) ON DELETE SET NULL ON UPDATE CASCADE;
+ALTER TABLE Funcionario ADD FOREIGN KEY (CodDept) REFERENCES Departamento (CodDept) ON DELETE SET NULL ON UPDATE CASCADE;
 ALTER TABLE FuncionarioADM ADD FOREIGN KEY (CPF) REFERENCES Funcionario (CPF) ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE FuncionarioProjeto ADD FOREIGN KEY (CPF) REFERENCES Funcionario(CPF) ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE FuncionarioProjeto ADD FOREIGN KEY (CodProjeto) REFERENCES Projeto (Codigo) ON DELETE CASCADE ON UPDATE CASCADE;
